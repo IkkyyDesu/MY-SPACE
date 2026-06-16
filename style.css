@@ -638,7 +638,10 @@ body {
 .playlist-embed-wrap {
   padding: 12px;
   background: #050505;
-  border-bottom: 1px solid var(--gray-mid);
+  border-bottom: 1px solid var(--gray-mid); 
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* atur jarak di sini */
 }
 
 .playlist-note {
