@@ -4,17 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>✦ IKY'S SPACE ✦</title>
-  <link rel="icon" href="IMG/PFP/mio_colored.jpeg">
+  <link rel="icon" href="IMG/PFP/mio_colored.jpeg" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body data-theme="dark">
 
-  <!-- CRT scanline overlay -->
+  <!-- CITY BACKGROUND -->
+  <div class="city-bg" id="cityBg">
+    <div class="city-sky"></div>
+    <div class="city-sun"></div>
+    <div class="city-moon"></div>
+    <div class="city-stars">
+      <span class="star"></span><span class="star"></span><span class="star"></span>
+      <span class="star"></span><span class="star"></span><span class="star"></span>
+      <span class="star"></span><span class="star"></span><span class="star"></span>
+      <span class="star"></span><span class="star"></span><span class="star"></span>
+    </div>
+    <div class="city-clouds">
+      <div class="cloud cloud-1"></div>
+      <div class="cloud cloud-2"></div>
+      <div class="cloud cloud-3"></div>
+      <div class="cloud cloud-4"></div>
+    </div>
+    <div class="city-silhouette">
+      <div class="city-buildings" id="cityBuildings"></div>
+    </div>
+  </div>
+
+  <!-- CRT SCANLINE OVERLAY -->
   <div class="crt-overlay"></div>
 
-  <!-- Pixel cursor decoration -->
-  <div class="pixel-cursor" id="pixelCursor"></div>
+  <!-- THEME TOGGLE -->
+  <div class="theme-toggle-wrap">
+    <span class="icon" id="themeIcon">🌙</span>
+    <span class="label">theme</span>
+    <div class="theme-toggle" id="themeToggle" role="button" tabindex="0" aria-label="Toggle theme">
+      <div class="slider"></div>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header class="site-header">
@@ -29,7 +57,8 @@
   <!-- MARQUEE -->
   <div class="marquee-wrap">
     <div class="marquee-inner">
-      ✦ WELCOME TO MY PAGE ✦ thanks 4 stopping by ✦ don't forget 2 sign my guestbook ✦ music = life ✦ WELCOME TO MY PAGE ✦ thanks 4 stopping by ✦ don't forget 2 sign my guestbook ✦ music = life ✦
+      ✦ WELCOME TO MY PAGE ✦ thanks 4 stopping by ✦ don't forget 2 sign my guestbook ✦ music = life ✦
+      WELCOME TO MY PAGE ✦ thanks 4 stopping by ✦ don't forget 2 sign my guestbook ✦ music = life ✦
     </div>
   </div>
 
@@ -44,13 +73,7 @@
         <div class="card-title-bar">[ PROFILE.EXE ]</div>
         <div class="pfp-wrapper">
           <div class="pfp-frame">
-            <!-- Replace src with your actual profile picture URL -->
-            <img
-              src="IMG/PFP/mio_colored.jpeg"
-              alt="Profile Picture"
-              class="pfp-img"
-              id="pfpImg"
-            />
+            <img src="IMG/PFP/mio_colored.jpeg" alt="Profile Picture" class="pfp-img" id="pfpImg" />
             <div class="pfp-pixel-border"></div>
           </div>
         </div>
@@ -60,8 +83,8 @@
           <span id="statusText">online and listening to music</span>
         </div>
         <div class="profile-bio" id="profileBio">
-🎵 musicholic.<br/>
-          just an earthling.<br/>
+          🎵 musicholic.<br />
+          just an earthling.<br />
           losing my mind.
         </div>
       </section>
@@ -79,7 +102,6 @@
         <div class="np-bar-wrap">
           <div class="np-bar"></div>
         </div>
-        <!-- Replace href with your Spotify playlist URL -->
         <a href="https://open.spotify.com/user/ubzghgc8wamyjfcgwnymm21g7?si=a4b1265477924e9d" target="_blank" class="btn-pixel btn-spotify">
           ♫ VIEW MY PLAYLIST
         </a>
@@ -88,8 +110,8 @@
       <!-- 5 Games to Know Me -->
       <section class="card games-card">
         <div class="card-title-bar">[ 5 GAMES 2 KNOW ME ]</div>
-        <ul class="games-list"> 
-          <a href="https://store.steampowered.com/app/367520/Hollow_Knight/" target="_blank">    
+        <ul class="games-list">
+          <a href="https://store.steampowered.com/app/367520/Hollow_Knight/" target="_blank">
             <li class="game-item">
               <div class="game-rank">01</div>
               <div class="game-info">
@@ -98,8 +120,8 @@
               </div>
               <div class="game-icon">🕹️</div>
             </li>
-          </a> 
-          <a href="https://www.minecraft.net/en-us " target="_blank">
+          </a>
+          <a href="https://www.minecraft.net/en-us" target="_blank">
             <li class="game-item">
               <div class="game-rank">02</div>
               <div class="game-info">
@@ -108,17 +130,17 @@
               </div>
               <div class="game-icon">🕹️</div>
             </li>
-          </a> 
-          <a href="https://store.steampowered.com/app/17470/Dead_Space_2008/" target="_blank">   
+          </a>
+          <a href="https://store.steampowered.com/app/17470/Dead_Space_2008/" target="_blank">
             <li class="game-item">
-             <div class="game-rank">03</div>
-             <div class="game-info">
-               <div class="game-title">Dead Space</div>
-               <div class="game-genre">genre · Sci-fi Survival Horror</div>
-             </div>
-             <div class="game-icon">🕹️</div>
-           </li>
-          </a> 
+              <div class="game-rank">03</div>
+              <div class="game-info">
+                <div class="game-title">Dead Space</div>
+                <div class="game-genre">genre · Sci-fi Survival Horror</div>
+              </div>
+              <div class="game-icon">🕹️</div>
+            </li>
+          </a>
           <a href="https://store.steampowered.com/app/632360/Risk_of_Rain_2/" target="_blank">
             <li class="game-item">
               <div class="game-rank">04</div>
@@ -138,17 +160,17 @@
               </div>
               <div class="game-icon">🕹️</div>
             </li>
-          </a> 
+          </a>
         </ul>
         <div class="games-footer">insert coin to continue ▶</div>
       </section>
-      
+
       <!-- Mood widget -->
       <section class="card mood-card">
         <div class="card-title-bar">[ TODAY'S MOOD ]</div>
         <div class="mood-emoji" id="moodEmoji">🌙</div>
         <div class="mood-text" id="moodText">nostalgic</div>
-      </section> 
+      </section>
     </aside>
 
     <!-- RIGHT COLUMN: CONTENT -->
@@ -175,7 +197,6 @@
       <section class="card social-card">
         <div class="card-title-bar">[ FIND ME AT ]</div>
         <div class="social-grid">
-
           <a href="https://twitter.com/Asuna9005" target="_blank" class="social-btn social-twitter">
             <span class="social-icon">𝕏</span>
             <div class="social-info">
@@ -184,7 +205,6 @@
             </div>
             <span class="social-arrow">▶</span>
           </a>
-
           <a href="https://instagram.com/ikydesu_" target="_blank" class="social-btn social-instagram">
             <span class="social-icon">◈</span>
             <div class="social-info">
@@ -193,7 +213,6 @@
             </div>
             <span class="social-arrow">▶</span>
           </a>
-
           <a href="https://bsky.app/profile/iky9005.bsky.social" target="_blank" class="social-btn social-bluesky">
             <span class="social-icon">☁</span>
             <div class="social-info">
@@ -202,7 +221,14 @@
             </div>
             <span class="social-arrow">▶</span>
           </a>
-
+          <a href="https://open.spotify.com/user/ubzghgc8wamyjfcgwnymm21g7?si=a4b1265477924e9d" target="_blank" class="social-btn social-spotify">
+            <span class="social-icon">♫</span>
+            <div class="social-info">
+              <div class="social-name">SPOTIFY</div>
+              <div class="social-handle">listen with me</div>
+            </div>
+            <span class="social-arrow">▶</span>
+          </a>
         </div>
       </section>
 
@@ -218,60 +244,30 @@
         </ol>
       </section>
 
-      <!-- Spotify Playlist Embed -->
+      <!-- PLAYLIST CARD — clickable items open modal -->
       <section class="card playlist-card">
-        <div class="card-title-bar">[ MY PLAYLIST ]</div>
-        <div class="playlist-embed-wrap">
-          <!-- Replace PLAYLIST_ID with your actual Spotify playlist ID -->
-          <iframe
-            id="spotifyEmbed"
-            src="https://open.spotify.com/embed/playlist/3vXSleEPoPmZd86xJ1IpUj?utm_source=generator&si=543db487d0924970"
-            width="100%"
-            height="352"
-            frameBorder="0"
-            allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            style="border-radius:4px;"
-          ></iframe>
-          <iframe
-            id="spotifyEmbed"
-            src="https://open.spotify.com/embed/playlist/5riPAnv9pNJxRVUwlstLMn?utm_source=generator&si=67f47b26542d4ea5"
-            width="100%"
-            height="352"
-            frameBorder="0"
-            allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            style="border-radius:4px;"
-          ></iframe>
-          <iframe
-            id="spotifyEmbed"
-            src="https://open.spotify.com/embed/playlist/5LoPsc58H9G8NJwoQZ93dK?utm_source=generator&si=764478cf97bd4157"
-            width="100%"
-            height="352"
-            frameBorder="0"
-            allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            style="border-radius:4px;"
-          ></iframe>
-          <iframe
-            id="spotifyEmbed"
-            src="https://open.spotify.com/embed/playlist/2alBtdff4u7EAIho0mrGEI?utm_source=generator&si=eddee837ab0e412c"
-            width="100%"
-            height="352"
-            frameBorder="0"
-            allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            style="border-radius:4px;"
-          ></iframe>
+        <div class="card-title-bar">[ MY PLAYLISTS ]</div>
+        <div class="playlist-grid" id="playlistGrid">
+          <!-- items will be injected by JS -->
         </div>
-        <p class="playlist-note">↑ the playlist may change from time to time, with songs being added or removed.</p>
+        <p class="playlist-note">↑ click a playlist to open it in a popup ✦</p>
       </section>
+
     </div>
   </main>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <span class="modal-title" id="modalTitle">🎵 PLAYLIST</span>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <iframe id="modalIframe" src="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="site-footer">
