@@ -480,8 +480,8 @@ body {
 }
 
 .pfp-frame {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border: 3px solid var(--accent);
   box-shadow: 3px 3px 0 var(--accent);
   overflow: hidden;
