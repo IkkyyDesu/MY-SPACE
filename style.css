@@ -1,56 +1,75 @@
 /* ===== RESET & ROOT ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+
 :root {
-  --green: #00F5FF;
-  --magenta: #FF2BD6;
-  --yellow: #FFB347;
-  --cyan: #00F5FF;
-  --white: #FFFFFF;
+  /* SYNTHWAVE GLOBAL TOKENS */
+  --sw-hot-pink:    #FF2D78;
+  --sw-purple:      #BF5FFF;
+  --sw-cyan:        #0FF4FF;
+  --sw-yellow:      #FFE566;
+  --sw-orange:      #FF7043;
+  --sw-deep:        #0D0221;
+  --magenta:        #FF2D78;
+  --cyan:           #0FF4FF;
   --pixel-size: 4px;
-
-  /* LIGHT MODE - SYNTHWAVE DAY */
-  --bg-sky: #FF8AD8;
-  --bg-sky2: #FFD6A5;
-  --cloud: #FFF3FF;
-  --city-wall: #7B5CFF;
-  --city-wall2: #9D7BFF;
-  --city-window: #FFE066;
-  --city-window-lit: #FF8A00;
-  --text-primary: #2B124C;
-  --text-secondary: #FF2BD6;
-  --panel-bg: rgba(255, 240, 255, 0.88);
-  --panel-border: #FF2BD6;
-  --panel-header: #7B5CFF;
-  --panel-header-text: #FFFFFF;
-  --accent: #FF2BD6;
-  --link-color: #00F5FF;
-  --star-opacity: 0;
-  --sun-opacity: 1;
-  --ground: #5B2A86;
-  --road: #3A1F5D;
+ 
+  /* LIGHT MODE - synthwave sunset dusk */
+  --bg-sky:         #FF6B9D;
+  --bg-sky2:        #C850C0;
+  --cloud:          #FFB3D1;
+  --city-wall:      #6B2FA0;
+  --city-wall2:     #4A1570;
+  --city-window:    #0FF4FF;
+  --city-window-lit:#FF2D78;
+  --text-primary:   #1A0533;
+  --text-secondary: #7B2FBE;
+  --panel-bg:       rgba(255,230,245,0.88);
+  --panel-border:   #BF5FFF;
+  --panel-header:   #7B2FBE;
+  --panel-header-text: #FFE0F7;
+  --accent:         #7B2FBE;
+  --link-color:     #FF2D78;
+  --star-opacity:   0;
+  --sun-opacity:    1;
+  --ground:         #3D0D6B;
+  --road:           #1A0533;
+  --yellow:         #FFE566;
+  --green:          #0FF4FF;
+  --crt-glow:       #FF2D78;
+  --crt-roll-color: rgba(255,45,120,0.15);
+  --crt-tear-color: rgba(0,255,248,0.3);
+  --marquee-color:  #FF2D78;
 }
-
+ 
 [data-theme="dark"] {
-  --bg-sky: #090018;
-  --bg-sky2: #170033;
-  --cloud: transparent;
-  --city-wall: #24104A;
-  --city-wall2: #341C66;
-  --city-window: #FFEA70;
-  --city-window-lit: #FF8A00;
-  --text-primary: #F5D6FF;
-  --text-secondary: #00F5FF;
-  --panel-bg: rgba(15, 0, 35, 0.92);
-  --panel-border: #FF2BD6;
-  --panel-header: #FF2BD6;
-  --panel-header-text: #090018;
-  --accent: #00F5FF;
-  --link-color: #FF7BFF;
-  --star-opacity: 1;
-  --sun-opacity: 0;
-  --ground: #120022;
-  --road: #1B1030;
+  /* DARK MODE - full synthwave night */
+  --bg-sky:         #0D0221;
+  --bg-sky2:        #150535;
+  --cloud:          transparent;
+  --city-wall:      #1A0845;
+  --city-wall2:     #0F0530;
+  --city-window:    #0FF4FF;
+  --city-window-lit:#FF2D78;
+  --text-primary:   #FFB3D1;
+  --text-secondary: #BF5FFF;
+  --panel-bg:       rgba(13,2,33,0.93);
+  --panel-border:   #BF5FFF;
+  --panel-header:   #FF2D78;
+  --panel-header-text: #0D0221;
+  --accent:         #0FF4FF;
+  --link-color:     #FF2D78;
+  --star-opacity:   1;
+  --sun-opacity:    0;
+  --ground:         #0A011A;
+  --road:           #06000F;
+  --yellow:         #FFE566;
+  --green:          #0FF4FF;
+  --crt-glow:       #BF5FFF;
+  --crt-roll-color: rgba(191,95,255,0.18);
+  --crt-tear-color: rgba(0,255,248,0.35);
+  --marquee-color:  #BF5FFF;
+  --magenta:        #FF2D78;
 }
 
 /* ===== GLOBAL ===== */
@@ -946,10 +965,6 @@ body {
   cursor: pointer;
   image-rendering: pixelated; /* Menjaga gambar 8-bit tetap tajam */
   transition: transform 0.2s ease-in-out;
-}
-
-#mascot-img:hover {
-  transform: scale(1.1); /* Efek membesar sedikit saat disentuh kursor */
 }
 
 #speech-bubble {
