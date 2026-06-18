@@ -363,6 +363,34 @@ body {
   padding: 14px 16px;
 }
 
+/* Update agar maskot di dalam panel tidak berantakan */
+.panel-content #mascot-container {
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+/* Penyesuaian bubble agar tidak melampaui batas panel */
+.panel-content #speech-bubble {
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 5px;
+}
+
+/* Kita gunakan selector yang sangat spesifik agar pasti terbaca */
+.pixel-panel #mascot-container #mascot-img {
+    width: 120px !important; /* Ganti angka ini sesuai keinginanmu */
+    height: auto !important;
+    display: block !important;
+}
+
+/* Responsive: Jika layar kecil, maskot pindah ke atas teks */
+@media (max-width: 680px) {
+  .panel-content {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+
 /* ===== GIF PANEL ===== */
 .gif-container {
   padding: 10px; /* Sedikit ruang agar GIF tidak langsung menempel ke border dalam */
@@ -439,13 +467,28 @@ body {
   font-family: 'Press Start 2P', monospace;
   font-size: 14px;
   color: var(--accent);
+  text-shadow: 2px 2px 0 var(--cyan);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+[data-theme="dark"] .profile-name {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: var(--accent);
   text-shadow: 2px 2px 0 var(--magenta);
   margin-bottom: 6px;
   line-height: 1.4;
 }
 
 .profile-handle {
-  color: var(--link-color);
+  color: var(--accent);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+[data-theme="dark"] .profile-handle {
+  color: var(--accent);
   font-size: 18px;
   margin-bottom: 8px;
 }
@@ -864,7 +907,7 @@ body {
 }
 
 #mascot-img {
-  width: 100px; /* Ubah ukuran maskot di sini */
+  width: 120px; /* Ubah ukuran maskot di sini */
   height: auto;
   cursor: pointer;
   image-rendering: pixelated; /* Menjaga gambar 8-bit tetap tajam */
